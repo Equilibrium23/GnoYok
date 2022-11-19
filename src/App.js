@@ -5,8 +5,10 @@ import "leaflet/dist/leaflet.css";
 import MapMarker from "./components/map/MapMarker";
 import sample_data from "./sample_data/sample_data.json"
 import { useEffect, useState } from 'react';
-import { filterProductsByRadius } from "./utils/radiusFilter.js"
+import { filterProductsByRadius, getDistance } from "./utils/radiusFilter.js"
+import Stack from "@mui/material/Stack"
 import L from 'leaflet';
+import AddProductMenu from './components/AddProductMenu';
 
 const greenOptions = { color: '#94C973' }
 
@@ -21,10 +23,14 @@ function error(err) {
 }
 
 function App() {
-    var radius = 9500; //TODO: configurable in Search interface
+    var radius = 2000; //TODO: configurable in Search interface
 
-    const [centerPos, setCenterPos] = useState([50.090786, 19.988419])
+    const [centerPos, setCenterPos] = useState([50.067849, 19.9909743])
+    const [products, setProducts] = useState(sample_data);
 
+    const addNewProduct = (newProduct) => {
+        setProducts([...products, newProduct]);
+    }
     function success(pos) {
         const crd = pos.coords;
 
@@ -46,22 +52,27 @@ function App() {
     })
 
     return (
-        <MapContainer center={centerPos} zoom={13} scrollWheelZoom={true}>
-            <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
+        <div style={{position:"relative"}}>
+            <Stack direction="row">
+                <MapContainer center={centerPos} zoom={13} scrollWheelZoom={true}>
+                    <TileLayer
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
 
-            <Circle center={centerPos} pathOptions={greenOptions} radius={radius} />
-            <Marker position={centerPos} icon={meMarkerIcon} >
-                <Popup>
-                    This me!
-                </Popup>
-            </Marker>
-            {sample_data.filter(product => filterProductsByRadius(centerPos, radius, product.coords)).map(product => (
-                <MapMarker product={product} />
-            ))}
-        </MapContainer>
+                    <Circle center={centerPos} pathOptions={greenOptions} radius={radius} />
+                    <Marker position={centerPos} icon={meMarkerIcon} >
+                        <Popup>
+                            This me!
+                        </Popup>
+                    </Marker>
+                    {products.map(product => (
+                        <MapMarker product={product} distance={getDistance(centerPos, product.coords)} inRange={!filterProductsByRadius(centerPos, radius, product.coords)} />
+                    ))}
+                </MapContainer>
+                <AddProductMenu onAddNewProduct={addNewProduct}/>
+            </Stack>
+        </div>
     );
 }
 

@@ -1,10 +1,38 @@
 {
-    "food" : {
+    "food": {
         "name": "Food",
         "icon": "./icons/food.svg"
     },
-    "home" : {
+    "home": {
         "name": "Home Decor",
         "icon": "./icons/home.svg"
+    },
+    "bakery": {
+        "name": "Bakery",
+        "icon": "./icons/bakery.svg"
+    },
+    "child": {
+        "name": "child",
+        "icon": "./icons/child.svg"
+    },
+    "clothes" : {
+        "name": "Clothes",
+        "icon": "./icons/clothes.svg"
+    },
+    "garage" : {
+        "name": "garage",
+        "icon": "./icons/garage.svg"
+    },
+    "laptop" : {
+        "name": "Laptop",
+        "icon": "./icons/laptop.svg"
+    },
+    "stroller" : {
+        "name": "stroller",
+        "icon": "./icons/stroller.svg"
+    },
+    "plumbering" : {
+        "name": "plumbering",
+        "icon": "./icons/valve.svg"
     }
 }
