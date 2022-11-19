@@ -10,12 +10,14 @@ export default function AddProduct() {
       title: '',
       description: '',
       adress: '',
-      owner: ''
+      owner: '',
+      contact: ''
     }
   });
 
   const onSubmit = data => {
     data.coords = getCoordinates(data.adress);
+    console.log(data);
   };
 
   return (
@@ -80,6 +82,16 @@ export default function AddProduct() {
             control={control}
             rules={{ required: true }}
             render={({ field }) => <Input id="owner-input" aria-describedby="owner-input-text"{...field} />}
+          />
+        </FormControl>
+
+        <FormControl margin="dense" sx={{ width: 1 }}>
+          <InputLabel htmlFor="contact-input">Contact</InputLabel>
+          <Controller
+            name="contact"
+            control={control}
+            rules={{ required: true }}
+            render={({ field }) => <Input id="contact-input" aria-describedby="contact-input-text"{...field} />}
           />
         </FormControl>
 
