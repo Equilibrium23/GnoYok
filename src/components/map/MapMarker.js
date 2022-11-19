@@ -15,7 +15,8 @@ import {generateJakDojadeUrl} from "../../thirdparty/jakdojade/urlGenerator"
 function MapMarker(props) {
     var markerIcon = L.icon({
         iconUrl: categories[props.product.category].icon,
-        iconSize: L.point(24, 24)
+        iconSize: L.point(24, 24),
+        className: props.inRange ? "inactive-marker" : ""
     })
     return (
         <Marker position={props.product.coords} icon={markerIcon}>

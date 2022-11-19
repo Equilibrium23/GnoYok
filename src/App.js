@@ -21,9 +21,9 @@ function error(err) {
 }
 
 function App() {
-    var radius = 9500; //TODO: configurable in Search interface
+    var radius = 2000; //TODO: configurable in Search interface
 
-    const [centerPos, setCenterPos] = useState([50.090786, 19.988419])
+    const [centerPos, setCenterPos] = useState([50.067849, 19.9909743])
 
     function success(pos) {
         const crd = pos.coords;
@@ -58,8 +58,8 @@ function App() {
                     This me!
                 </Popup>
             </Marker>
-            {sample_data.filter(product => filterProductsByRadius(centerPos, radius, product.coords)).map(product => (
-                <MapMarker product={product} />
+            {sample_data.map(product => (
+                <MapMarker product={product} inRange={!filterProductsByRadius(centerPos, radius, product.coords)} />
             ))}
         </MapContainer>
     );
