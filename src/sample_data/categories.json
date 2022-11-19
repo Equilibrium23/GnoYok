@@ -1,4 +1,10 @@
 {
-    "food" : {"name": "Jedzenie", "icon": "tbd"},
-    "home" : {"name": "Artykuły dla domu", "icon": "tbd"}
+    "food" : {
+        "name": "Food",
+        "icon": "./icons/food.svg"
+    },
+    "home" : {
+        "name": "Home Decor",
+        "icon": "./icons/home.svg"
+    }
 }
