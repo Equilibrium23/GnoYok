@@ -57,11 +57,13 @@ function App() {
         navigator.geolocation.getCurrentPosition(success, error, fetchUserLocationOptions);
     }, []);
 
+    const [searchRadius, setSearchRadius] = useState(1000)
+
     return (
         <div style={{position: "relative"}}>
-            <Map centerPosition={centerPos} searchRadius={radius}/>
-            <Stack sx={{ zIndex: 10001, position: "absolute", top: "10vh", left:10, width: "fit-content", backgroundColor:"white"}}>
-               <SearchBar/>
+            <Map centerPosition={centerPos} searchRadius={searchRadius}/>
+            <Stack sx={{borderRadius: 2, zIndex: 10001, position: "absolute", top: "10vh", left:10, width: "20%", backgroundColor:"white"}}>
+               <SearchBar setSearchRadius={setSearchRadius}/>
             </Stack>
         </div>
     );
