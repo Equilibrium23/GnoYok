@@ -3,8 +3,8 @@ import { InputLabel, Input, Button, FormControl, Stack, Autocomplete, TextField 
 import { getCoordinates } from "../thirdparty/positionstack/coordinates.js"
 import categories from "../sample_data/categories.json"
 
-export default function AddProduct() {
-  const { handleSubmit, control } = useForm({
+export default function AddProduct(props) {
+  const { handleSubmit, control, reset } = useForm({
     defaultValues: {
       category: '',
       title: '',
@@ -15,9 +15,10 @@ export default function AddProduct() {
     }
   });
 
-  const onSubmit = data => {
+  const onSubmit = (data) => {
     data.coords = getCoordinates(data.adress);
-    console.log(data);
+    props.onAddProduct(data);
+    reset();
   };
 
   return (
