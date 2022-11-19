@@ -15,39 +15,25 @@ L.Icon.Default.mergeOptions({
     shadowUrl: require('leaflet/dist/images/marker-shadow.png')
 });
 
-
-//TODO: change sync to async call:
-// getCoordinates("Osiedle Avia 6,Kraków, Poland");
-function getCoordinates(address) {
-    const apiKey = "326804ffeb1e7c6bac46e2c520a0ea75"
-    var url = "http://api.positionstack.com/v1/forward?access_key=" + apiKey + "&query=" + address;
-
-    const request = new XMLHttpRequest();
-
-    request.open('GET', url, false);  // `false` makes the request synchronous
-    request.send(null);
-
-    if (request.status === 200) {
-        console.log(request.responseText);
-        var actualData = JSON.parse(request.responseText);
-
-        return [actualData.data[0].latitude, actualData.data[0].longitude];
-    } else
-        return null
-}
-
-//filterProductsByRadius(centerPos, radius, product.coords)
 function filterProductsByRadius(centerPos, radius, coords) {
     if (radius == null)
         return false;
 
-    const DEGREE_2_METER_RATIO = 111139;
+    var lat1 = centerPos[0]
+    var lon1 = centerPos[1]
+    var lat2 = coords[0]
+    var lon2 = coords[1]
 
-    var rad = Math.sqrt(
-        Math.pow(centerPos[0] - coords[0], 2) +
-        Math.pow(centerPos[1] - coords[1], 2)) * DEGREE_2_METER_RATIO;
+    const R = 6378.137; // Radius of earth in KM
+    var dLat = lat2 * Math.PI / 180 - lat1 * Math.PI / 180;
+    var dLon = lon2 * Math.PI / 180 - lon1 * Math.PI / 180;
+    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    var d = R * c * 1000;
 
-    return rad <= radius;
+    return d <= radius;
 }
 
 const greenOptions = { color: '#94C973' }
@@ -63,7 +49,7 @@ function error(err) {
 }
 
 function App() {
-    var radius = 2600; //TODO: configurable in Search interface
+    var radius = 260; //TODO: configurable in Search interface
 
     const [centerPos, setCenterPos] = useState([50.090786, 19.988419])
 
