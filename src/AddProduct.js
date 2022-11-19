@@ -1,37 +1,56 @@
-import React, { Component } from 'react'
-import { FormControl, InputLabel, Input, FormHelperText, Container, Button } from '@mui/material';
+import { useForm, Controller } from "react-hook-form";
+import { Input, Container, Button } from "@mui/material";
 
-export default class AddProduct extends Component {
-  
-  handleSubmit(e) {
-    e.preventDefault();
-    console.log('You clicked submit.');
-    console.log(e.target);
-  }
+export default function AddProduct() {
+  //{ category: "", title: "", description: "", adress: "", coords: "", owner: ""}
+  const { handleSubmit, control } = useForm({
+    defaultValues: {
+      category: '',
+      title: '',
+      description: '',
+      adress: '',
+      owner: ''
+    }
+  });
 
-  constructor()
-  {
-    this.a1 = "";
-    this.a2 = "";
-  }
+  const onSubmit = data => console.log(data);
 
-  render() {
-    return (
-      <Container maxWidth="sm">
-        <form onSubmit={this.handleSubmit}>
-          <FormControl>
-            <InputLabel htmlFor="my-input">Email address</InputLabel>
-            <Input id="my-input" aria-describedby="my-helper-text" value={this.a1}/>
-            <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
-          </FormControl>
-          <FormControl>
-            <InputLabel htmlFor="my-input1">Email address</InputLabel>
-            <Input id="my-input1" aria-describedby="my-helper-text1" value={this.a2}/>
-            <FormHelperText id="my-helper-text1">We'll never share your email.</FormHelperText>
-          </FormControl>
-          <Button type="submit">Submit</Button>
-        </form>
-      </Container>
-    )
-  }
+  return (
+    <Container maxWidth="sm">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Controller
+          name="category"
+          control={control}
+          rules={{ required: true }}
+          render={({ field }) => <Input {...field} />}
+        />
+        <Controller
+          name="title"
+          control={control}
+          rules={{ required: true }}
+          render={({ field }) => <Input {...field} />}
+        />
+        <Controller
+          name="description"
+          control={control}
+          rules={{ required: true }}
+          render={({ field }) => <Input {...field} />}
+        />
+        <Controller
+          name="adress"
+          control={control}
+          rules={{ required: true }}
+          render={({ field }) => <Input {...field} />}
+        />
+        <Controller
+          name="owner"
+          control={control}
+          rules={{ required: true }}
+          render={({ field }) => <Input {...field} />}
+        />
+        <Button type="submit">Submit</Button>
+      </form>
+    </Container>
+  );
+
 }
