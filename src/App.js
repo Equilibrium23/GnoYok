@@ -2,18 +2,9 @@ import './App.css';
 import { MapContainer } from 'react-leaflet/MapContainer'
 import { Circle, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import L from 'leaflet';
 import MapMarker from "./components/map/MapMarker";
 import sample_data from "./sample_data/sample_data.json"
 import { useEffect, useState } from 'react';
-
-delete L.Icon.Default.prototype._getIconUrl;
-
-L.Icon.Default.mergeOptions({
-    iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-    iconUrl: require('leaflet/dist/images/marker-icon.png'),
-    shadowUrl: require('leaflet/dist/images/marker-shadow.png')
-});
 
 function filterProductsByRadius(centerPos, radius, coords) {
     if (radius == null)
