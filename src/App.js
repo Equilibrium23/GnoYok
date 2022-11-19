@@ -5,27 +5,8 @@ import "leaflet/dist/leaflet.css";
 import MapMarker from "./components/map/MapMarker";
 import sample_data from "./sample_data/sample_data.json"
 import { useEffect, useState } from 'react';
-
-function filterProductsByRadius(centerPos, radius, coords) {
-    if (radius == null)
-        return false;
-
-    var lat1 = centerPos[0]
-    var lon1 = centerPos[1]
-    var lat2 = coords[0]
-    var lon2 = coords[1]
-
-    const R = 6378.137; // Radius of earth in KM
-    var dLat = lat2 * Math.PI / 180 - lat1 * Math.PI / 180;
-    var dLon = lon2 * Math.PI / 180 - lon1 * Math.PI / 180;
-    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-        Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-        Math.sin(dLon / 2) * Math.sin(dLon / 2);
-    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    var d = R * c * 1000;
-
-    return d <= radius;
-}
+import { filterProductsByRadius } from "./utils/radiusFilter.js"
+import L from 'leaflet';
 
 const greenOptions = { color: '#94C973' }
 
@@ -40,7 +21,7 @@ function error(err) {
 }
 
 function App() {
-    var radius = 260; //TODO: configurable in Search interface
+    var radius = 9500; //TODO: configurable in Search interface
 
     const [centerPos, setCenterPos] = useState([50.090786, 19.988419])
 
@@ -59,6 +40,11 @@ function App() {
         navigator.geolocation.getCurrentPosition(success, error, fetchUserLocationOptions);
     }, []);
 
+    var meMarkerIcon = L.icon({
+        iconUrl: 'icons/me.svg',
+        iconSize: L.point(24, 24)
+    })
+
     return (
         <MapContainer center={centerPos} zoom={13} scrollWheelZoom={true}>
             <TileLayer
@@ -67,12 +53,12 @@ function App() {
             />
 
             <Circle center={centerPos} pathOptions={greenOptions} radius={radius} />
-            <Marker position={centerPos} >
+            <Marker position={centerPos} icon={meMarkerIcon} >
                 <Popup>
                     This me!
                 </Popup>
             </Marker>
-            {sample_data.map(product => (
+            {sample_data.filter(product => filterProductsByRadius(centerPos, radius, product.coords)).map(product => (
                 <MapMarker product={product} />
             ))}
         </MapContainer>
