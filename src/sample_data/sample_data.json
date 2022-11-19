@@ -1,57 +1,134 @@
 [
-    {
-       "category":"food",
-       "title":"Pineapple pizza",
-       "description":"Lunch leftovers",
-       "adress":"Lema 15, Kraków",
-       "coords":[
-          50.066632,
-          19.990106
-       ],
-       "owner":"karolh91"
-    },
-    {
-       "category":"food",
-       "title":"Icecream",
-       "description":"We all scream for icecream",
-       "adress":"Dąbska 22, 31-572 Kraków",
-       "coords":[
-          50.067249,
-          19.985757
-       ],
-       "owner":"boska_lodziarna"
-    },
-    {
-       "category":"home",
-       "title":"Monstera",
-       "description":"Plant, not aggressive, wants to find a new home",
-       "adress":"Dąbska 20A/LU3, 31-572 Kraków",
-       "coords":[
-          50.067657,
-          19.984829
-       ],
-       "owner":"plantlover6969696"
-    },
-    {
-       "category":"food",
-       "title":"Spaghetti",
-       "description":"My Mom's spaghetti",
-       "adress":"Dąbska 20b, 31-572 Kraków",
-       "coords":[
-          50.068244,
-          19.985394
-       ],
-       "owner":"eminem72"
-    },
-    {
-       "category":"home",
-       "title":"Pictue",
-       "description":"Nice picture, showing some landscape with moose",
-       "adress":"al. Pokoju 44, 31-564 Kraków",
-       "coords":[
-          50.064076,
-          19.984342
-       ],
-       "owner":"random8578684"
-    }
- ]
+   {
+      "category": "food",
+      "title": "Pineapple pizza",
+      "description": "Lunch leftovers",
+      "adress": "Lema 15, Kraków",
+      "coords": [
+         50.066632,
+         19.990106
+      ],
+      "owner": "karolh91"
+   },
+   {
+      "category": "food",
+      "title": "Icecream",
+      "description": "We all scream for icecream",
+      "adress": "Dąbska 22, 31-572 Kraków",
+      "coords": [
+         50.067249,
+         19.985757
+      ],
+      "owner": "boska_lodziarna"
+   },
+   {
+      "category": "home",
+      "title": "Monstera",
+      "description": "Plant, not aggressive, wants to find a new home",
+      "adress": "Dąbska 20A/LU3, 31-572 Kraków",
+      "coords": [
+         50.067657,
+         19.984829
+      ],
+      "owner": "plantlover6969696"
+   },
+   {
+      "category": "food",
+      "title": "Spaghetti",
+      "description": "My Mom's spaghetti",
+      "adress": "Dąbska 20b, 31-572 Kraków",
+      "coords": [
+         50.068244,
+         19.985394
+      ],
+      "owner": "eminem72"
+   },
+   {
+      "category": "home",
+      "title": "Pictue",
+      "description": "Nice picture, showing some landscape with moose",
+      "adress": "al. Pokoju 44, 31-564 Kraków",
+      "coords": [
+         50.064076,
+         19.984342
+      ],
+      "owner": "random8578684"
+   },
+   {
+      "category": "home",
+      "title": "Child shoes",
+      "description": "Child shoes 20 size, blue, used for 1 month",
+      "adress": "Aleja 29 Listopada 50, Kraków",
+      "coords": [
+         50.083821,
+         19.950355
+      ],
+      "owner": "mother789652"
+   },
+   {
+      "category": "home",
+      "title": "4x Winter tires",
+      "description": "winter tires R17, in good condition, used for 2 seasons",
+      "adress": "Płaszowska 21, 30-713 Kraków, Poland",
+      "coords": [
+         50.044733,
+         19.97597
+      ],
+      "owner": "passeratiPassionate666"
+   },
+   {
+      "category": "home",
+      "title": "Dell Laptop",
+      "description": "Good Dell laptop, screen 16', no disk, good battery",
+      "adress": "Księdza Józefa Tischnera 8, 30-713 Kraków, Poland",
+      "coords": [
+         50.028421,
+         19.938322
+      ],
+      "owner": "sabreEmployee01"
+   },
+   {
+      "category": "home",
+      "title": "Children's winter trousers XL",
+      "description": "XL trousers for brave boy, 26cm long",
+      "adress": "Sołtysowska 37b, Kraków, Poland",
+      "coords": [
+         50.063189,
+         20.022351
+      ],
+      "owner": "winterFanXXX"
+   },
+   {
+      "category": "food",
+      "title": "Wheat rolls, fresh",
+      "description": "There are 50 wheat rolls to give",
+      "adress": "Przewóz 45, 30-716 Kraków",
+      "coords": [
+         50.040858,
+         19.993642
+      ],
+      "owner": "nightBaker1111"
+   },
+   {
+      "category": "home",
+      "title": "PCV pipe FI110",
+      "description": "After home renovation I have two PCV pipes FI110 100cm",
+      "adress": "Marchołta 53, 31-416 Kraków",
+      "coords": [
+         50.093919,
+         19.986554
+      ],
+      "owner": "plumberingMaestro111"
+   },
+   {
+      "category": "home",
+      "title": "Baby-carriage",
+      "description": "Baby-carriage used 15 months, pink-yellow",
+      "adress": "Osiedle Kościuszkowskie 9, 31-859 Kraków",
+      "coords": [
+         50.083154,
+         20.015489
+      ],
+      "owner": "motherOfTheFather1"
+   }
+]
