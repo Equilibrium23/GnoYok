@@ -1,4 +1,5 @@
 import {Slider} from "@mui/material";
+import MultipleSelect from "../MultipleSelect";
 
 function displayInKilometers(value){
     return value/1000 + " km"
@@ -20,10 +21,7 @@ function SearchBar(props){
                 valueLabelFormat={displayInKilometers}
                 onChange={(event, value) => props.setSearchRadius(value)}
             />
-
-            sdfsd<br/>
-            sdfsd<br/>
-            sdfsd<br/>
+            <MultipleSelect setChosenCategories={props.setChosenCategories} chosenCategories={props.chosenCategories}/>
         </>
     )
 }

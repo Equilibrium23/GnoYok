@@ -58,12 +58,13 @@ function App() {
     }, []);
 
     const [searchRadius, setSearchRadius] = useState(1000)
+    const [chosenCategories, setChosenCategories] = useState([])
 
     return (
         <div style={{position: "relative"}}>
-            <Map centerPosition={centerPos} searchRadius={searchRadius}/>
-            <Stack sx={{borderRadius: 2, zIndex: 10001, position: "absolute", top: "10vh", left:10, width: "20%", backgroundColor:"white"}}>
-               <SearchBar setSearchRadius={setSearchRadius}/>
+            <Map centerPosition={centerPos} searchRadius={searchRadius} chosenCategories={chosenCategories}/>
+            <Stack sx={{borderRadius: 2, zIndex: 10001, position: "absolute", top: "10vh", left:10, width: "25%", backgroundColor:"white"}}>
+               <SearchBar setSearchRadius={setSearchRadius} setChosenCategories={setChosenCategories} chosenCategories={chosenCategories}/>
             </Stack>
         </div>
     );

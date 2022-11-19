@@ -4,6 +4,7 @@ import MapMarker from "./MapMarker";
 
 function Map(props) {
     const greenOptions = { color: '#94C973' }
+
     return(
         <MapContainer center={props.centerPosition} zoom={13} scrollWheelZoom={true}>
             <TileLayer
@@ -16,7 +17,8 @@ function Map(props) {
                     This me!
                 </Popup>
             </Marker>
-            {sample_data.map(product => (
+            {sample_data.filter(item => props.chosenCategories.includes(item.category))
+                .map(product => (
                 <MapMarker product={product} />
             ))}
         </MapContainer>

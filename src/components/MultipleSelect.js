@@ -1,10 +1,8 @@
 import {Checkbox, FormControl, InputLabel, ListItemText, MenuItem, OutlinedInput, Select} from "@mui/material";
-import {useState} from "react";
 import categories from "../sample_data/categories.json"
 
 function MultipleSelect(props){
     const productCategories = Object.keys(categories)
-    console.log(productCategories)
     const ITEM_HEIGHT = 48;
     const ITEM_PADDING_TOP = 8;
     const MenuProps = {
@@ -15,12 +13,11 @@ function MultipleSelect(props){
             },
         },
     };
-    const [chosenCategories, setChosenCategories] = useState([]);
     const handleChange = (event) => {
         const {
             target: { value },
         } = event;
-        setChosenCategories(
+        props.setChosenCategories(
             // On autofill we get a stringified value.
             typeof value === 'string' ? value.split(',') : value
         );
@@ -33,7 +30,7 @@ function MultipleSelect(props){
                     labelId="demo-multiple-checkbox-label"
                     id="demo-multiple-checkbox"
                     multiple
-                    value={chosenCategories}
+                    value={props.chosenCategories}
                     onChange={handleChange}
                     input={<OutlinedInput label="Tag" />}
                     renderValue={(selected) => selected.join(', ')}
@@ -42,7 +39,7 @@ function MultipleSelect(props){
                 >
                     {productCategories.map((productCategory) => (
                         <MenuItem key={productCategory} value={productCategory}>
-                            <Checkbox checked={chosenCategories.indexOf(productCategory) > -1} />
+                            <Checkbox checked={props.chosenCategories.indexOf(productCategory) > -1} />
                             <ListItemText primary={productCategory} />
                         </MenuItem>
                     ))}
