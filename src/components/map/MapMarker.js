@@ -5,14 +5,9 @@ import CategoryIcon from '@mui/icons-material/Category';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ManIcon from '@mui/icons-material/Man';
 import {Box, Stack} from "@mui/material";
+import {generateGoogleMapUrl} from "../../thirdparty/googleMap/urlGenerator"
 
-function gmapsDirectionsLink(origin, destination)
-{
-    if(origin)
-        return `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}`
-    else
-        return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`
-}
+
 
 function MapMarker(props) {
     return (
@@ -29,10 +24,10 @@ function MapMarker(props) {
                       <DescriptionIcon/>  {props.product.description}
                     </Box>
                     <Box>
-                      <LocationOnIcon/>
-                      <a href={gmapsDirectionsLink("", props.product.adress)}>
-                        {props.product.adress}
-                      </a>
+                        <LocationOnIcon/>
+                        <a target="_blank" href={generateGoogleMapUrl("", props.product.adress)}>
+                            {props.product.adress}
+                        </a>
                     </Box>
                     <Box>
                        <ManIcon/> {props.product.owner}

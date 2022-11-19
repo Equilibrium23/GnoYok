@@ -1,8 +1,8 @@
 [
     {
        "category":"food",
-       "title":"Pizza z ananasem",
-       "description":"Została po obiedzie",
+       "title":"Pineapple pizza",
+       "description":"Lunch leftovers",
        "adress":"Lema 15, Kraków",
        "coords":[
           50.066632,
@@ -12,8 +12,8 @@
     },
     {
        "category":"food",
-       "title":"Lody (nieprzeterminowane)",
-       "description":"Jeszcze się nie przeterminowały",
+       "title":"Icecream",
+       "description":"We all scream for icecream",
        "adress":"Dąbska 22, 31-572 Kraków",
        "coords":[
           50.067249,
@@ -24,7 +24,7 @@
     {
        "category":"home",
        "title":"Monstera",
-       "description":"Roślinka, monstera nie jest agresywna, może znajdzie nowy dom",
+       "description":"Plant, not aggressive, wants to find a new home",
        "adress":"Dąbska 20A/LU3, 31-572 Kraków",
        "coords":[
           50.067657,
@@ -34,19 +34,19 @@
     },
     {
        "category":"food",
-       "title":"Gołąbki",
-       "description":"2 kilo gołąbków od mamy",
+       "title":"Spaghetti",
+       "description":"My Mom's spaghetti",
        "adress":"Dąbska 20b, 31-572 Kraków",
        "coords":[
           50.068244,
           19.985394
        ],
-       "owner":"suoik2003"
+       "owner":"eminem72"
     },
     {
        "category":"home",
-       "title":"Obrazek",
-       "description":"Ładny obrazek, przedstawiający jakiś krajobraz z łosiem",
+       "title":"Pictue",
+       "description":"Nice picture, showing some landscape with moose",
        "adress":"al. Pokoju 44, 31-564 Kraków",
        "coords":[
           50.064076,
