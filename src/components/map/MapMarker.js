@@ -16,7 +16,8 @@ import AssistantDirectionIcon from '@mui/icons-material/AssistantDirection';
 function MapMarker(props, distance) {
     var markerIcon = L.icon({
         iconUrl: categories[props.product.category].icon,
-        iconSize: L.point(24, 24)
+        iconSize: L.point(24, 24),
+        className: props.inRange ? "inactive-marker" : ""
     })
 
     return (

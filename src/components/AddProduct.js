@@ -1,7 +1,7 @@
 import { useForm, Controller } from "react-hook-form";
-import { InputLabel, Input, Button, FormControl, Stack } from "@mui/material";
-import { getCoordinates } from "../../thirdparty/positionstack/coordinates.js"
-
+import { InputLabel, Input, Button, FormControl, Stack, Autocomplete, TextField } from "@mui/material";
+import { getCoordinates } from "../thirdparty/positionstack/coordinates.js"
+import categories from "../sample_data/categories.json"
 
 export default function AddProduct() {
   const { handleSubmit, control } = useForm({
@@ -25,25 +25,45 @@ export default function AddProduct() {
         justifyContent="center"
         alignItems="center"
         spacing={2}>
-        <FormControl margin="dense">
-          <InputLabel htmlFor="category-input">Category</InputLabel>
+        <FormControl margin="dense" sx={{ width: 1 }}>
           <Controller
             name="category"
             control={control}
             rules={{ required: true }}
-            render={({ field }) => <Input id="category-input" aria-describedby="category-input-text" margin="dense" {...field} />}
+            render={({ field: { onChange, value } }) => (
+              <Autocomplete
+                onChange={(event, item) => {
+                  onChange(item);
+                }}
+                value={value}
+                options={Object.keys(categories)}
+                getOptionLabel={(item) => (item ? item : "")}
+                isOptionEqualToValue={(option, value) =>
+                  value === undefined || value === "" || option === value
+                }
+                renderInput={(params) => (
+                  <TextField
+                    {...params}
+                    label="Category"
+                    margin="normal"
+                    variant="outlined"
+                    required
+                  />
+                )}
+              />
+            )}
           />
         </FormControl>
-        <FormControl margin="dense">
+        <FormControl margin="dense" sx={{ width: 1 }}>
           <InputLabel htmlFor="title-input">Title</InputLabel>
           <Controller
             name="title"
             control={control}
             rules={{ required: true }}
-            render={({ field }) => <Input id="title-input" aria-describedby="title-input-text" {...field} />}
+            render={({ field }) => <Input id="title-input" aria-describedby="title-input-text" required {...field} />}
           />
         </FormControl>
-        <FormControl margin="dense">
+        <FormControl margin="dense" sx={{ width: 1 }}>
           <InputLabel htmlFor="adress-input">Address</InputLabel>
           <Controller
             name="adress"
@@ -52,8 +72,8 @@ export default function AddProduct() {
             render={({ field }) => <Input id="adress-input" aria-describedby="adress-input-text"{...field} />}
           />
         </FormControl>
-        <FormControl margin="dense">
 
+        <FormControl margin="dense" sx={{ width: 1 }}>
           <InputLabel htmlFor="owner-input">Owner</InputLabel>
           <Controller
             name="owner"
@@ -62,8 +82,8 @@ export default function AddProduct() {
             render={({ field }) => <Input id="owner-input" aria-describedby="owner-input-text"{...field} />}
           />
         </FormControl>
-        <FormControl margin="dense">
 
+        <FormControl margin="dense" sx={{ width: 1 }}>
           <InputLabel htmlFor="description-input">Description</InputLabel>
           <Controller
             name="description"
