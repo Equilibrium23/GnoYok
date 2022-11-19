@@ -40,7 +40,7 @@ function error(err) {
 }
 
 function App() {
-    var radius = 260; //TODO: configurable in Search interface
+    var radius = 9500; //TODO: configurable in Search interface
 
     const [centerPos, setCenterPos] = useState([50.090786, 19.988419])
 
