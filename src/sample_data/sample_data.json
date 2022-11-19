@@ -8,7 +8,8 @@
          50.066632,
          19.990106
       ],
-      "owner": "karolh91"
+      "owner": "karolh91",
+      "contact": "685987741"
    },
    {
       "category": "food",
@@ -19,7 +20,8 @@
          50.067249,
          19.985757
       ],
-      "owner": "boska_lodziarna"
+      "owner": "boska_lodziarna",
+      "contact": "654523728"
    },
    {
       "category": "home",
@@ -30,7 +32,8 @@
          50.067657,
          19.984829
       ],
-      "owner": "plantlover6969696"
+      "owner": "plantlover6969696",
+      "contact": "898767896"
    },
    {
       "category": "food",
@@ -41,21 +44,23 @@
          50.068244,
          19.985394
       ],
-      "owner": "eminem72"
+      "owner": "eminem72",
+      "contact": "658745342"
    },
    {
       "category": "home",
-      "title": "Pictue",
+      "title": "Picture",
       "description": "Nice picture, showing some landscape with moose",
       "adress": "al. Pokoju 44, 31-564 Kraków",
       "coords": [
          50.064076,
          19.984342
       ],
-      "owner": "random8578684"
+      "owner": "random8578684",
+      "contact": "587412236"
    },
    {
-      "category": "home",
+      "category": "clothes",
       "title": "Child shoes",
       "description": "Child shoes 20 size, blue, used for 1 month",
       "adress": "Aleja 29 Listopada 50, Kraków",
@@ -63,10 +68,11 @@
          50.083821,
          19.950355
       ],
-      "owner": "mother789652"
+      "owner": "mother789652",
+      "contact": "787876454"
    },
    {
-      "category": "home",
+      "category": "garage",
       "title": "4x Winter tires",
       "description": "winter tires R17, in good condition, used for 2 seasons",
       "adress": "Płaszowska 21, 30-713 Kraków, Poland",
@@ -74,10 +80,11 @@
          50.044733,
          19.97597
       ],
-      "owner": "passeratiPassionate666"
+      "owner": "passeratiPassionate666",
+      "contact": "661588544"
    },
    {
-      "category": "home",
+      "category": "laptop",
       "title": "Dell Laptop",
       "description": "Good Dell laptop, screen 16', no disk, good battery",
       "adress": "Księdza Józefa Tischnera 8, 30-713 Kraków, Poland",
@@ -85,10 +92,11 @@
          50.028421,
          19.938322
       ],
-      "owner": "sabreEmployee01"
+      "owner": "sabreEmployee01",
+      "contact": "+12 32145687"
    },
    {
-      "category": "home",
+      "category": "child",
       "title": "Children's winter trousers XL",
       "description": "XL trousers for brave boy, 26cm long",
       "adress": "Sołtysowska 37b, Kraków, Poland",
@@ -96,10 +104,11 @@
          50.063189,
          20.022351
       ],
-      "owner": "winterFanXXX"
+      "owner": "winterFanXXX",
+      "contact": "567089098"
    },
    {
-      "category": "food",
+      "category": "bakery",
       "title": "Wheat rolls, fresh",
       "description": "There are 50 wheat rolls to give",
       "adress": "Przewóz 45, 30-716 Kraków",
@@ -107,10 +116,11 @@
          50.040858,
          19.993642
       ],
-      "owner": "nightBaker1111"
+      "owner": "nightBaker1111",
+      "contact": "874569032"
    },
    {
-      "category": "home",
+      "category": "plumbering",
       "title": "PCV pipe FI110",
       "description": "After home renovation I have two PCV pipes FI110 100cm",
       "adress": "Marchołta 53, 31-416 Kraków",
@@ -118,10 +128,11 @@
          50.093919,
          19.986554
       ],
-      "owner": "plumberingMaestro111"
+      "owner": "plumberingMaestro111",
+      "contact": "654987321"
    },
    {
-      "category": "home",
+      "category": "stroller",
       "title": "Baby-carriage",
       "description": "Baby-carriage used 15 months, pink-yellow",
       "adress": "Osiedle Kościuszkowskie 9, 31-859 Kraków",
@@ -129,16 +140,31 @@
          50.083154,
          20.015489
       ],
-      "owner": "motherOfTheFather1"
+      "owner": "motherOfTheFather1",
+      "contact": "543654765"
    },
    {
-      "category": "home",
+      "category": "child",
       "title": "Child winter hat",
       "description": "Warm orange child winter hat for 5-6y girl",
       "adress": "Osiedle Na Wzgórzach 1A, 31-722 Kraków",
       "coords": [
-         50.091828, 20.058831
+         50.091828,
+         20.058831
       ],
-      "owner": "hanna123"
+      "owner": "hanna123",
+      "contact": "665544778"
+   },
+   {
+      "category": "home",
+      "title": "Umbrella",
+      "description": "Nice black umbrella",
+      "adress": "Tadeusza Kościuszki 5, 30-105 Kraków",
+      "coords": [
+         50.054779,
+         19.925829
+      ],
+      "owner": "_MrTed_",
+      "contact": "852963741"
    }
 ]

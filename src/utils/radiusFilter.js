@@ -1,7 +1,4 @@
-export function filterProductsByRadius(centerPos, radius, coords) {
-    if (radius == null)
-        return false;
-
+export function getDistance(centerPos, coords) {
     var lat1 = centerPos[0]
     var lon1 = centerPos[1]
     var lat2 = coords[0]
@@ -16,5 +13,9 @@ export function filterProductsByRadius(centerPos, radius, coords) {
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     var d = R * c * 1000;
 
-    return d <= radius;
+    return d;
+}
+
+export function filterProductsByRadius(centerPos, radius, coords) {
+    return getDistance(centerPos, coords) <= radius;
 }

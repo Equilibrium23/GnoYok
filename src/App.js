@@ -5,7 +5,7 @@ import "leaflet/dist/leaflet.css";
 import MapMarker from "./components/map/MapMarker";
 import sample_data from "./sample_data/sample_data.json"
 import { useEffect, useState } from 'react';
-import { filterProductsByRadius } from "./utils/radiusFilter.js"
+import { filterProductsByRadius, getDistance } from "./utils/radiusFilter.js"
 import L from 'leaflet';
 
 const greenOptions = { color: '#94C973' }
@@ -59,7 +59,7 @@ function App() {
                 </Popup>
             </Marker>
             {sample_data.filter(product => filterProductsByRadius(centerPos, radius, product.coords)).map(product => (
-                <MapMarker product={product} />
+                <MapMarker product={product} distance={getDistance(centerPos, product.coords)} />
             ))}
         </MapContainer>
     );
