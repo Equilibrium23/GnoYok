@@ -1,0 +1,57 @@
+[
+    {
+       "category":"food",
+       "title":"Pizza z ananasem",
+       "description":"Została po obiedzie",
+       "adress":"Lema 15, Kraków",
+       "coords":[
+          50.066632,
+          19.990106
+       ],
+       "owner":"karolh91"
+    },
+    {
+       "category":"food",
+       "title":"Lody (nieprzeterminowane)",
+       "description":"Jeszcze się nie przeterminowały",
+       "adress":"Dąbska 22, 31-572 Kraków",
+       "coords":[
+          50.067249,
+          19.985757
+       ],
+       "owner":"boska_lodziarna"
+    },
+    {
+       "category":"home",
+       "title":"Monstera",
+       "description":"Roślinka, monstera nie jest agresywna, może znajdzie nowy dom",
+       "adress":"Dąbska 20A/LU3, 31-572 Kraków",
+       "coords":[
+          50.067657,
+          19.984829
+       ],
+       "owner":"plantlover6969696"
+    },
+    {
+       "category":"food",
+       "title":"Gołąbki",
+       "description":"2 kilo gołąbków od mamy",
+       "adress":"Dąbska 20b, 31-572 Kraków",
+       "coords":[
+          50.068244,
+          19.985394
+       ],
+       "owner":"suoik2003"
+    },
+    {
+       "category":"home",
+       "title":"Obrazek",
+       "description":"Ładny obrazek, przedstawiający jakiś krajobraz z łosiem",
+       "adress":"al. Pokoju 44, 31-564 Kraków",
+       "coords":[
+          50.064076,
+          19.984342
+       ],
+       "owner":"random8578684"
+    }
+ ]
