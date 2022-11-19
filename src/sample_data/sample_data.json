@@ -130,5 +130,15 @@
          20.015489
       ],
       "owner": "motherOfTheFather1"
+   },
+   {
+      "category": "home",
+      "title": "Child winter hat",
+      "description": "Warm orange child winter hat for 5-6y girl",
+      "adress": "Osiedle Na Wzgórzach 1A, 31-722 Kraków",
+      "coords": [
+         50.091828, 20.058831
+      ],
+      "owner": "hanna123"
    }
 ]
