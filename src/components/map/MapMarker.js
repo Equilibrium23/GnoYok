@@ -6,16 +6,21 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ManIcon from '@mui/icons-material/Man';
 import {Box, Stack} from "@mui/material";
 import {generateGoogleMapUrl} from "../../thirdparty/googleMap/urlGenerator"
-
+import L from 'leaflet';
+import categories from '../../sample_data/categories.json'
 
 
 function MapMarker(props) {
+    var markerIcon = L.divIcon({
+        className: 'custom-icon',
+        html: `<img src="${categories[props.product.category].icon}"/>`,
+    })
     return (
-        <Marker position={props.product.coords}>
+        <Marker position={props.product.coords} icon={markerIcon}>
             <Popup>
                 <Stack spacing={2}>
                     <Box>
-                       <CategoryIcon/> {props.product.category}
+                       <CategoryIcon/> {categories[props.product.category].name}
                     </Box>
                     <Box>
                        <TitleIcon/> {props.product.title}
