@@ -5,6 +5,7 @@ import "leaflet/dist/leaflet.css";
 import MapMarker from "./components/map/MapMarker";
 import sample_data from "./sample_data/sample_data.json"
 import { useEffect, useState } from 'react';
+import L from 'leaflet';
 
 function filterProductsByRadius(centerPos, radius, coords) {
     if (radius == null)
@@ -59,6 +60,11 @@ function App() {
         navigator.geolocation.getCurrentPosition(success, error, fetchUserLocationOptions);
     }, []);
 
+    var meMarkerIcon = L.icon({
+        iconUrl: 'icons/me.svg',
+        iconSize: L.point(24, 24)
+    })
+
     return (
         <MapContainer center={centerPos} zoom={13} scrollWheelZoom={true}>
             <TileLayer
@@ -67,7 +73,7 @@ function App() {
             />
 
             <Circle center={centerPos} pathOptions={greenOptions} radius={radius} />
-            <Marker position={centerPos} >
+            <Marker position={centerPos} icon={meMarkerIcon} >
                 <Popup>
                     This me!
                 </Popup>
