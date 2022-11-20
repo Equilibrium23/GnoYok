@@ -25,35 +25,53 @@ function MapMarker(props) {
             <Popup>
                 <Stack spacing={2}>
                     <Box>
-                        <CategoryIcon /> {categories[props.product.category].name}
+                        <CategoryIcon />
+                        <p style={{display:"inline", fontSize: "30px", fontFamily: "Arial"}}>
+                            {categories[props.product.category].name}
+                        </p>
                     </Box>
                     <Box>
-                        <TitleIcon /> {props.product.title}
+                        <TitleIcon />
+                        <p style={{display:"inline", fontSize: "20px", fontFamily: "Arial"}}>
+                            {props.product.title}
+                        </p>
                     </Box>
                     <Box>
                         <DescriptionIcon />  {props.product.description}
                     </Box>
                     <Box>
                         <LocationOnIcon />
-                        <a target="_blank" href={generateGoogleMapUrl("", props.product.adress)}>
-                            {props.product.adress}
-                        </a>
+                        <p style={{display:"inline", fontSize: "15px", fontFamily: "Arial"}}>
+                            <a target="_blank" href={generateGoogleMapUrl("", props.product.adress)}>
+                                {props.product.adress}
+                            </a>
+                        </p>
                     </Box>
                     <Box>
-                        <ManIcon /> {props.product.owner}
+                        <ManIcon />
+                        <p style={{display:"inline", fontSize: "15px", fontFamily: "Arial"}}>
+                             {props.product.owner}
+                        </p>
                     </Box>
                     <Box>
-                        <ContactPageIcon /> {props.product.contact}
+                        <ContactPageIcon />
+                        <p style={{display:"inline", fontSize: "15px", fontFamily: "Arial"}}>
+                            {props.product.contact}
+                        </p>
                     </Box>
                     <Box>
                         <DirectionsBusIcon />
-                        <a target="_blank" href={generateJakDojadeUrl("Krakow", [50.066632, 19.990106], props.product.coords)}>
-                            JakDojade
-                        </a>
+                        <p style={{display:"inline", fontSize: "15px", fontFamily: "Arial"}}>
+                            <a target="_blank" href={generateJakDojadeUrl("Krakow", [50.066632, 19.990106], props.product.coords)}>
+                                JakDojade
+                            </a>
+                        </p>
                     </Box>
                     <Box>
                         <AssistantDirectionIcon />
-                        {Math.round(props.distanceFromCenter * 10) / 10000} km
+                        <p style={{display:"inline", fontSize: "15px", fontFamily: "Arial"}}>
+                            {Math.round(props.distanceFromCenter * 10) / 10000} km
+                        </p>
                     </Box>
                 </Stack>
             </Popup>

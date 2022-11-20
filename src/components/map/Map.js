@@ -23,7 +23,9 @@ function Map(props) {
             <Circle center={props.centerPosition} pathOptions={greenOptions} radius={props.searchRadius} />
             <Marker position={props.centerPosition} icon={meMarkerIcon} >
                 <Popup>
-                    You are here
+                    <p style={{display:"inline", fontSize: "20px", fontFamily: "Arial"}}>
+                        You are here
+                    </p>
                 </Popup>
             </Marker>
             {props.products

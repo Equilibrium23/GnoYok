@@ -1,15 +1,21 @@
-import {Slider} from "@mui/material";
+import {Slider, Stack} from "@mui/material";
 import MultipleSelect from "../MultipleSelect";
 
 function displayInKilometers(value){
     return value/1000 + " km"
 }
 
-
 function SearchBar(props){
     return (
-        <>
-            <p>Choose search radius:</p>
+        <Stack
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            spacing={1}
+        >
+            <p style={{fontSize: "2em", left: "10%", fontFamily: "Arial"}}>
+                Choose search radius:
+            </p>
             <Slider
                 defaultValue={1000}
                 aria-label="Default"
@@ -21,8 +27,11 @@ function SearchBar(props){
                 valueLabelFormat={displayInKilometers}
                 onChange={(event, value) => props.setSearchRadius(value)}
             />
+            <p style={{fontSize: "2em", left: "10%", fontFamily: "Arial"}}>
+                Choose category:
+            </p>
             <MultipleSelect setChosenCategories={props.setChosenCategories} chosenCategories={props.chosenCategories}/>
-        </>
+        </Stack>
     )
 }
 

@@ -31,7 +31,7 @@ function App() {
             <Stack direction="row">
                 <Map products={products} centerPosition={centerPos} searchRadius={searchRadius} chosenCategories={chosenCategories}/>
                 <AddProductMenu onAddNewProduct={addNewProduct}/>
-                <Stack sx={{borderRadius: 2, zIndex: 10001, position: "absolute", top: "10vh", left:10, width: "25%", backgroundColor:"white"}}>
+                <Stack sx={{opacity: "85%", borderRadius: 2, zIndex: 10001, position: "absolute", top: "10vh", left:10, width: "25%", backgroundColor:"white"}}>
                     <SearchBar setSearchRadius={setSearchRadius} setChosenCategories={setChosenCategories} chosenCategories={chosenCategories}/>
                 </Stack>
             </Stack>
