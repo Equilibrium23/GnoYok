@@ -1,5 +1,5 @@
 import {Slider} from "@mui/material";
-import MultipleSelect from "./MultipleSelect";
+import MultipleSelect from "../MultipleSelect";
 
 function displayInKilometers(value){
     return value/1000 + " km"

@@ -1,7 +1,7 @@
 import { useForm, Controller } from "react-hook-form";
 import { InputLabel, Input, Button, FormControl, Stack, Autocomplete, TextField } from "@mui/material";
-import { getCoordinates } from "../thirdparty/positionstack/coordinates.js"
-import categories from "../sample_data/categories.json"
+import { getCoordinates } from "../../thirdparty/positionstack/coordinates.js"
+import categories from "../../sample_data/categories.json"
 
 export default function AddProduct(props) {
   const { handleSubmit, control, reset } = useForm({

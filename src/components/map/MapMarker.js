@@ -1,23 +1,23 @@
-import { Marker, Popup } from "react-leaflet";
+import {Marker, Popup} from "react-leaflet";
 import TitleIcon from '@mui/icons-material/Title';
 import DescriptionIcon from '@mui/icons-material/Description';
 import CategoryIcon from '@mui/icons-material/Category';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ManIcon from '@mui/icons-material/Man';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
-import { Box, Stack } from "@mui/material";
+import {Box, Stack} from "@mui/material";
 import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
-import { generateGoogleMapUrl } from "../../thirdparty/googleMap/urlGenerator"
+import {generateGoogleMapUrl} from "../../thirdparty/googleMap/urlGenerator"
 import L from 'leaflet';
 import categories from '../../sample_data/categories.json'
-import { generateJakDojadeUrl } from "../../thirdparty/jakdojade/urlGenerator"
+import {generateJakDojadeUrl} from "../../thirdparty/jakdojade/urlGenerator"
 import AssistantDirectionIcon from '@mui/icons-material/AssistantDirection';
 
-function MapMarker(props, distance) {
-    var markerIcon = L.icon({
+function MapMarker(props) {
+    const markerIcon = L.icon({
         iconUrl: categories[props.product.category].icon,
         iconSize: L.point(24, 24),
-        className: props.inRange ? "inactive-marker" : ""
+        className: props.inSearchRange ? "" : "inactive-marker"
     })
 
     return (
@@ -53,7 +53,7 @@ function MapMarker(props, distance) {
                     </Box>
                     <Box>
                         <AssistantDirectionIcon />
-                        {Math.round(props.distance * 10) / 10000} km
+                        {Math.round(props.distanceFromCenter * 10) / 10000} km
                     </Box>
                 </Stack>
             </Popup>

@@ -1,6 +1,7 @@
 import {Circle, MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import MapMarker from "./MapMarker";
 import L from 'leaflet';
+import {getDistance, productInSearchRange} from "../../utils/radiusFilter";
 
 function Map(props) {
     const greenOptions = { color: '#94C973' }
@@ -8,6 +9,11 @@ function Map(props) {
         iconUrl: 'icons/me.svg',
         iconSize: L.point(24, 24)
     })
+
+    const filterChosenCategories = (item) => {
+        return props.chosenCategories.includes(item.category)
+    }
+
     return(
         <MapContainer center={props.centerPosition} zoom={13} scrollWheelZoom={true}>
             <TileLayer
@@ -17,12 +23,13 @@ function Map(props) {
             <Circle center={props.centerPosition} pathOptions={greenOptions} radius={props.searchRadius} />
             <Marker position={props.centerPosition} icon={meMarkerIcon} >
                 <Popup>
-                    This me!
+                    You are here
                 </Popup>
             </Marker>
-            {props.products.filter(item => props.chosenCategories.includes(item.category))
+            {props.products
+                .filter(filterChosenCategories)
                 .map(product => (
-                    <MapMarker product={product} />
+                    <MapMarker distanceFromCenter={getDistance(props.centerPosition, product.coords)} inSearchRange={productInSearchRange(props.centerPosition, props.searchRadius, product.coords)} product={product} />
                 ))}
         </MapContainer>
     )
