@@ -166,5 +166,101 @@
       ],
       "owner": "_MrTed_",
       "contact": "852963741"
+   },
+   {
+      "category": "home",
+      "title": "Used sofa",
+      "description": "Almost new sofa, bought 3 months ago. Cost: 500 pln",
+      "adress": "Kobierzyńska 103, 30-382 Kraków",
+      "coords": [
+         50.023835,
+         19.910163
+      ],
+      "owner": "Andrzej Nowak",
+      "contact": "+48937999222"
+   },
+   {
+      "category": "clothes",
+      "title": "Flat cap",
+      "description": "Not my size, so I don't need it",
+      "adress": "Urocza 26, 30-602 Kraków",
+      "coords": [
+         50.024141,
+         19.940153
+      ],
+      "owner": "pati005",
+      "contact": "+48575637333"
+   },
+   {
+      "category": "stroller",
+      "title": "After 3 years of usage. For free",
+      "description": "Wonderful beautiful stroller. The child is too big for that already",
+      "adress": "Parkowa 16/4, 30-538 Kraków",
+      "coords": [
+         50.040223,
+         19.953198
+      ],
+      "owner": "magda__opo33",
+      "contact": "+48444555666"
+   },
+   {
+      "category": "stroller",
+      "title": "After 2 years of usage. For 2 children. For free",
+      "description": "Want to get rid of the stroller. Don't need it anymore",
+      "adress": "Porucznika Antoniego Stawarza 2, 30-540 Kraków",
+      "coords": [
+         50.042447,
+         19.953022
+      ],
+      "owner": "Wlodek Michalski",
+      "contact": "wlodek.michalski@gmail.com"
+   },
+   {
+      "category": "child",
+      "title": "Toys for small boys",
+      "description": "Creative toys for small children (up to 3 years). For free",
+      "adress": "Stefana Bobrowskiego 6, 31-552 Kraków",
+      "coords": [
+         50.057093,
+         19.964474
+      ],
+      "owner": "__ksiadddzzz134__",
+      "contact": "parafia.grzegorzki@o2.pl"
+   },
+   {
+      "category": "garage",
+      "title": "Tires 18. Pirelli",
+      "description": "Almost not used. Cost: 1000 EUR",
+      "adress": "Lotnicza 3, 31-462 Kraków",
+      "coords": [
+         50.072467,
+         19.966946
+      ],
+      "owner": "januszmotorniczy",
+      "contact": "januszek333@onet.pl"
+   },
+   {
+      "category": "garage",
+      "title": "Tires 17. Bad state",
+      "description": "Very old. For free. After 10 seasons",
+      "adress": "prof. Michała Życzkowskiego 29, 31-864 Kraków",
+      "coords": [
+         50.0781491,
+         19.9943011
+      ],
+      "owner": "Michal",
+      "contact": "+48116666938"
+   },
+   {
+      "category": "laptop",
+      "title": "Old laptop, intel duo core",
+      "description": "Very old laptop, 2GB RAM, integrated graphics, 250GB disk",
+      "adress": "Wrocławska 28, 30-011 Kraków",
+      "coords": [
+         50.0763144,
+         19.9203457,
+      ],
+      "owner": "Michal",
+      "contact": "+48116666938"
    }
 ]
