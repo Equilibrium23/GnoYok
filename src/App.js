@@ -9,8 +9,8 @@ import { filterProductsByRadius, getDistance } from "./utils/radiusFilter.js"
 import Stack from "@mui/material/Stack"
 import L from 'leaflet';
 import AddProductMenu from './components/AddProductMenu';
-
-const greenOptions = { color: '#94C973' }
+import Map from "./components/map/Map";
+import SearchBar from "./components/SearchBar";
 
 const fetchUserLocationOptions = {
     enableHighAccuracy: true,
@@ -51,26 +51,17 @@ function App() {
         iconSize: L.point(24, 24)
     })
 
+    const [searchRadius, setSearchRadius] = useState(1000)
+    const [chosenCategories, setChosenCategories] = useState([])
+
     return (
         <div style={{position:"relative"}}>
             <Stack direction="row">
-                <MapContainer center={centerPos} zoom={13} scrollWheelZoom={true}>
-                    <TileLayer
-                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    />
-
-                    <Circle center={centerPos} pathOptions={greenOptions} radius={radius} />
-                    <Marker position={centerPos} icon={meMarkerIcon} >
-                        <Popup>
-                            This me!
-                        </Popup>
-                    </Marker>
-                    {products.map(product => (
-                        <MapMarker product={product} distance={getDistance(centerPos, product.coords)} inRange={!filterProductsByRadius(centerPos, radius, product.coords)} />
-                    ))}
-                </MapContainer>
+                <Map products={products} centerPosition={centerPos} searchRadius={searchRadius} chosenCategories={chosenCategories}/>
                 <AddProductMenu onAddNewProduct={addNewProduct}/>
+                <Stack sx={{borderRadius: 2, zIndex: 10001, position: "absolute", top: "10vh", left:10, width: "25%", backgroundColor:"white"}}>
+                    <SearchBar setSearchRadius={setSearchRadius} setChosenCategories={setChosenCategories} chosenCategories={chosenCategories}/>
+                </Stack>
             </Stack>
         </div>
     );
