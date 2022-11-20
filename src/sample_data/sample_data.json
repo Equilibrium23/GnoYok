@@ -262,5 +262,115 @@
       ],
       "owner": "Michal",
       "contact": "+48116666938"
+   },
+   {
+      "category": "stroller",
+      "title": "After 2 years of usage. For 2 children. For free",
+      "description": "Want to get rid of the stroller. Don't need it anymore",
+      "adress": "Porucznika Antoniego Stawarza 2, 30-540 Kraków",
+      "coords": [50.0710352,19.9048224
+      ],
+      "owner": "Wlodek Michalski",
+      "contact": "wlodek.michalski@gmail.com"
+   },
+   {
+      "category": "child",
+      "title": "Toys for small boys",
+      "description": "Creative toys for small children (up to 3 years). For free",
+      "adress": "Stefana Bobrowskiego 6, 31-552 Kraków",
+      "coords": [50.0569765,19.9211933
+      ],
+      "owner": "__ksiadddzzz134__",
+      "contact": "parafia.grzegorzki@o2.pl"
+   },
+   {
+      "category": "garage",
+      "title": "Tires 18. Pirelli",
+      "description": "Almost not used. Cost: 1000 EUR",
+      "adress": "Lotnicza 3, 31-462 Kraków",
+      "coords": [50.0594691,19.9343467                                                             
+      ],
+      "owner": "januszmotorniczy",
+      "contact": "januszek333@onet.pl"
+   },
+   {                                                                                                                                                                                                                                                           
+      "category": "garage",
+      "title": "Tires 17. Bad state",
+      "description": "Very old. For free. After 10 seasons",                                                               
+      "adress": "prof. Michała Życzkowskiego 29, 31-864 Kraków",
+      "coords": [ 50.0658282,19.9335191
+      ],
+      "owner": "Michal",
+      "contact": "+48116666938"
+   },
+   {
+      "category": "laptop",
+      "title": "Old laptop, intel duo core",
+      "description": "Very old laptop, 2GB RAM, integrated graphics, 250GB disk",
+      "adress": "Wrocławska 28, 30-011 Kraków",
+      "coords": [50.0716311,19.9419077
+      ],
+      "owner": "Michal",
+      "contact": "+48116666938"
+   },
+   {
+      "category": "home",
+      "title": "Monstera",
+      "description": "Plant, not aggressive, wants to find a new home",
+      "adress": "Dąbska 20A/LU3, 31-572 Kraków",
+      "coords": [50.0533652,19.9434136
+      ],
+      "owner": "plantlover6969696",
+      "contact": "898767896"
+   },
+   {
+      "category": "home",
+      "title": "Flat",
+      "description": "near vistula river",
+      "adress": "Dąbska 20A/LU3, 31-572 Kraków",
+      "coords": [50.0487212,19.9264346
+      ],
+      "owner": "plantlover6969696",
+      "contact": "898767896"
+   },
+   {
+      "category": "home",
+      "title": "Monstera",
+      "description": "Plant, not aggressive, wants to find a new home",
+      "adress": "Dąbska 20A/LU3, 31-572 Kraków",
+      "coords": [50.061265,19.9471144
+      ],
+      "owner": "plantlover6969696",
+      "contact": "898767896"
+   },
+   {
+      "category": "food",
+      "title": "Pineapple pizza",
+      "description": "Lunch leftovers",
+      "adress": "Lema 15, Kraków",
+      "coords": [50.050759,19.919378
+      ],
+      "owner": "karolh91",
+      "contact": "685987741"
+   },
+   {
+      "category": "food",
+      "title": "Icecream",
+      "description": "We all scream for icecream",
+      "adress": "Dąbska 22, 31-572 Kraków",
+      "coords": [50.0521599,19.9172966
+      ],
+      "owner": "boska_lodziarna",
+      "contact": "654523728"
+   },
+   {
+      "category": "home",
+      "title": "Monstera",
+      "description": "Plant, not aggressive, wants to find a new home",
+      "adress": "Dąbska 20A/LU3, 31-572 Kraków",
+      "coords": [50.0587197,19.9277031
+      ],
+      "owner": "plantlover6969696",
+      "contact": "898767896"
    }
 ]
