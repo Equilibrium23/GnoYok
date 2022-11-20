@@ -9,7 +9,7 @@ However how to reach such person?
 
 In response to such this need we created the GnoYok!
 
-![alt text](logo2.png)
+![alt text](logo_readme.png)
 
 
 ## If you want to find something:
@@ -24,6 +24,9 @@ If you found something interesting, you just click a link to go directly to Goog
 ## If you have something to share:
 
 GnoYok allows you to add thing to share. Enter name, description, address and contact information. GnoYok will automatically place it on the map where you will for people to find.
+
+![alt text](image1.png)
+
 
 # Running GnoYok
 
