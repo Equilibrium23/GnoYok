@@ -1,6 +1,31 @@
-# Getting Started with Create React App
+# GnoYok
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Don't waste, share it!
+
+We have a lot of things which we don't longer need. 
+Instead of throwing it away (which creates waste!) what is there is someone who actually need it?
+
+However how to reach such person?
+
+In response to such this need we created the GnoYok!
+
+![alt text](logo2.png)
+
+
+## If you want to find something:
+
+Just open GnoYok and it will show you what people near you want to share.
+
+Select categories that interest you, search radius and start looking.
+
+If you found something interesting, you just click a link to go directly to Google Maps directions or find bus/tram connection at JakDojade.pl (because we love public transport). Truly frictionless experience!
+
+
+## If you have something to share:
+
+GnoYok allows you to add thing to share. Enter name, description, address and contact information. GnoYok will automatically place it on the map where you will for people to find.
+
+# Running GnoYok
 
 ## Available Scripts
 
