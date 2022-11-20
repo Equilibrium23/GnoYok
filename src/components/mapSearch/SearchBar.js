@@ -1,4 +1,4 @@
-import {Slider, Stack} from "@mui/material";
+import {Box, Slider, Stack} from "@mui/material";
 import MultipleSelect from "../MultipleSelect";
 
 function displayInKilometers(value){
@@ -8,6 +8,14 @@ function displayInKilometers(value){
 function SearchBar(props){
     return (
         <Stack
+            sx={{
+                opacity: "85%",
+                borderRadius: 2,
+                backgroundColor:"white",
+                position:"absolute",
+                top:"12vh",
+                width:"20vw"
+            }}
             direction="column"
             justifyContent="center"
             alignItems="center"

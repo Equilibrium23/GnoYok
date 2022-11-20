@@ -7,6 +7,7 @@ import AddProductMenu from './components/addProduct/AddProductMenu';
 import Map from "./components/map/Map";
 import SearchBar from "./components/mapSearch/SearchBar";
 import {currentPosition} from "./thirdparty/positionstack/coordinates";
+import {Box} from "@mui/material";
 
 function App() {
     const [centerPos, setCenterPos] = useState([50.067849, 19.9909743])
@@ -31,8 +32,24 @@ function App() {
             <Stack direction="row">
                 <Map products={products} centerPosition={centerPos} searchRadius={searchRadius} chosenCategories={chosenCategories}/>
                 <AddProductMenu onAddNewProduct={addNewProduct}/>
-                <Stack sx={{opacity: "85%", borderRadius: 2, zIndex: 10001, position: "absolute", top: "10vh", left:10, width: "25%", backgroundColor:"white"}}>
-                    <SearchBar setSearchRadius={setSearchRadius} setChosenCategories={setChosenCategories} chosenCategories={chosenCategories}/>
+                <Stack spacing={2} sx={{ zIndex: 10001, position: "absolute", top: "1vh", left:10, width: "25%"}}>
+                    <div style={{position:"relative"}}>
+                        <Box
+                            component="img"
+                            sx={{
+                                position:"absolute",
+                                left:"2vw",
+                                borderRadius: 5,
+                                height: 233,
+                                width: 350,
+                                maxHeight: { xs: 100, md: 100 },
+                                maxWidth: { xs: 100, md: 100 },
+                            }}
+                            alt="Company logo."
+                            src="icons/logo.png"
+                        />
+                        <SearchBar setSearchRadius={setSearchRadius} setChosenCategories={setChosenCategories} chosenCategories={chosenCategories}/>
+                    </div>
                 </Stack>
             </Stack>
         </div>

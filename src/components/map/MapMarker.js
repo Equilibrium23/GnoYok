@@ -26,13 +26,13 @@ function MapMarker(props) {
                 <Stack spacing={2}>
                     <Box>
                         <CategoryIcon />
-                        <p style={{display:"inline", fontSize: "30px", fontFamily: "Arial"}}>
+                        <p style={{display:"inline", fontSize: "20px", fontFamily: "Arial"}}>
                             {categories[props.product.category].name}
                         </p>
                     </Box>
                     <Box>
                         <TitleIcon />
-                        <p style={{display:"inline", fontSize: "20px", fontFamily: "Arial"}}>
+                        <p style={{display:"inline", fontSize: "30px", fontFamily: "Arial"}}>
                             {props.product.title}
                         </p>
                     </Box>
