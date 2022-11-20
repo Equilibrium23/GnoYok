@@ -9,7 +9,7 @@ However how to reach such person?
 
 In response to such this need we created the GnoYok!
 
-![alt text](logo_readme.png)
+![alt text](public/icons/GnoYok.gif)
 
 
 ## If you want to find something:
