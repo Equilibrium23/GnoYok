@@ -9,12 +9,12 @@ However how to reach such person?
 
 In response to such this need we created the GnoYok!
 
-![alt text](public/icons/GnoYok.gif)
+![alt text](logo_readme.png)
 
 
 ## If you want to find something:
 
-Just open GnoYok and it will show you what people near you want to share.
+Just open GnoYok and it will show you what people near you want to share (application will automatically locate you and place a special marker on the map).
 
 Select categories that interest you, search radius and start looking.
 
@@ -23,9 +23,9 @@ If you found something interesting, you just click a link to go directly to Goog
 
 ## If you have something to share:
 
-GnoYok allows you to add thing to share. Enter name, description, address and contact information. GnoYok will automatically place it on the map where you will for people to find.
+GnoYok allows you to add thing to share. Enter name, description, address and contact information. GnoYok will automatically place it on the map and other people could easily find it.
 
-![alt text](image1.png)
+![alt text](public/icons/GnoYok.gif)
 
 
 # Running GnoYok
